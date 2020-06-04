@@ -1,0 +1,255 @@
+/*removing style defaults*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  font-family: arial;
+}
+
+/*styling links*/
+a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  border-bottom: 1px solid green;
+}
+
+/*making the nav responsive using flex*/
+nav ul {
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  background-color: black;
+  padding: 17px;
+  width: 100%;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+/* styling the main layout*/
+.container {
+  background-color: white;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.banner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: 0;
+  background-image: linear-gradient(to right, green, rgb(51, 238, 51));
+  mix-blend-mode: color-burn;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner>* {
+  z-index: 10;
+  position: relative;
+}
+
+.banner {
+  background-image: url("../responsive-html-css-website/assets/cannabis.jpg");
+  min-height: 290px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 20vh 0;
+  color: white;
+  margin-bottom: 10px;
+}
+
+hr {
+  font-weight: 600;
+  height: 3px;
+}
+
+
+/*setting images to be of equal size*/
+.describe img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/*animating the emojis*/
+.describe .drug {
+  animation-name: drugs;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes drugs {
+  0% {
+    opacity: 0.1
+  }
+
+  25% {
+    opacity: 0.5
+  }
+
+  50% {
+    opacity: 0.6
+  }
+
+  75% {
+    opacity: 0.7
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+/* styling all the paragraphs*/
+.paragraph {
+  font-family: monospace;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.about-me {
+  font-size: 20px;
+  padding: 20px;
+  width: 100%;
+  line-height: 1.6rem;
+  font-weight: bold;
+}
+
+.head-title {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: white;
+  min-height: 100px;
+  background-color: black;
+}
+
+.head-contact {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  min-height: 200px;
+  color: white;
+  background-color: black;
+
+
+}
+
+.contact-banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.contact-banner p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.contact-banner {
+  min-height: 200px;
+  background-color: black;
+  text-align: center;
+  padding: 20vh 0;
+  color: white;
+  margin-bottom: 5px;
+
+}
+
+.flex-container {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.flex-container .item {
+  height: 100px;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.flex-container img {
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  background-color: black;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+/*making the website responsive using media queries*/
+@media screen and (max-width:720px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+
+
+
+  }
+
+  .flex-container .item {
+    height: 100px;
+    width: 90%;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    background-color: black;
+    padding: 17px;
+    width: 100%;
+  }
+
+  .head-contact {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+
+
+  }
+
+
+}
+
+@media screen and (max-width:460px) {
+  .describe img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+}
