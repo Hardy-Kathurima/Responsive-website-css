@@ -70,7 +70,7 @@ nav ul li {
 }
 
 .banner {
-  background-image: url("../responsive-html-css-website/assets/cannabis.jpg");
+  background-image: url("assets/cannabis.jpg");
   min-height: 290px;
   background-size: cover;
   background-repeat: no-repeat;
